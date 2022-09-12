@@ -1,0 +1,15 @@
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.csproj.AssemblyReference.cache
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.GeneratedMSBuildEditorConfig.editorconfig
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.AssemblyInfoInputs.cache
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.AssemblyInfo.cs
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.csproj.CoreCompileInputs.cache
+C:\EVALUAA\bin\Debug\net6.0\EVALUAA.exe
+C:\EVALUAA\bin\Debug\net6.0\EVALUAA.deps.json
+C:\EVALUAA\bin\Debug\net6.0\EVALUAA.runtimeconfig.json
+C:\EVALUAA\bin\Debug\net6.0\EVALUAA.dll
+C:\EVALUAA\bin\Debug\net6.0\EVALUAA.pdb
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.dll
+C:\EVALUAA\obj\Debug\net6.0\refint\EVALUAA.dll
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.pdb
+C:\EVALUAA\obj\Debug\net6.0\EVALUAA.genruntimeconfig.cache
+C:\EVALUAA\obj\Debug\net6.0\ref\EVALUAA.dll
