@@ -1,5 +1,5 @@
 Archivo: prueba.cpp
-Compilado: El 12/09/2022 a las 11:30:30
+Compilado: El 13/09/2022 a las 09:47:07
 
 pi = 3.141592653589793 = 3.1415927
 
@@ -12,7 +12,7 @@ d 20
 Variables: 
 area Float 0
 radio Float 0
-pi Float 0
+pi Float 3.1415927
 resultado Float 0
 a Int 0
-d Int 0
+d Int 11

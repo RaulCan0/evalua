@@ -1,4 +1,5 @@
-//Requerimiento 1: Eliminar las comillas del printf e interpretar las secuencias de escape dentro de la cadena.
+//Requerimiento 1: Eliminar las comillas del printf e interpretar 
+//                las secuencias de escape dentro de la cadena.
 //Requerimiento 2: Marcar los errores sintácticos cuando la variable no exista.
 //Requerimiento 3: Modificar el valor de la variable en la Asignacion.
 //Requerimiento 4: Obtener el valor de la variable cuando se requiera y programar el método getValor()
@@ -43,6 +44,15 @@ namespace Evalua
         private void modValor(string name, float newValue)
         {
             //Requerimiento 3
+            //Requerimiento 3: Modificar el valor de la variable en la Asignacion.
+            foreach (Variable v in listaVariables)
+            {
+             if(v .getNombre().Equals(name))
+             {
+                 v.setValor(newValue);
+             }
+            }
+
         }
         private float getValor(string nameVariable)
         {
@@ -141,20 +151,20 @@ namespace Evalua
         // Instruccion -> Printf | Scanf | If | While | Do | For | Switch | Asignacion
         private void Instruccion()
         {
-            if (getContenido() == "printf")
-                Printf();
-            else if (getContenido() == "scanf")
-                Scanf();
-            else if (getContenido() == "if")
+            if (getContenido() == "if")
                 If();
-            else if (getContenido() == "while")
-                While();
             else if (getContenido() == "do")
                 Do();
+            else if (getContenido() == "while")
+                While();
             else if (getContenido() == "for")
                 For();
             else if (getContenido() == "switch")
                 Switch();
+            else if (getContenido() == "printf")
+                Printf();
+            else if (getContenido() == "scanf")
+                Scanf();
             else
             {
                 Asignacion();
