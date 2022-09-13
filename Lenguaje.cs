@@ -56,6 +56,7 @@ namespace Evalua
         }
         private float getValor(string nameVariable)
         {
+           //Requerimiento 4
            //Requerimiento 4: Obtener el valor de la variable cuando se requiera y programar el método getValor()
            foreach (Variable v in listaVariables)
 
@@ -207,7 +208,7 @@ namespace Evalua
             match(";");
         }
         // Scanf -> scanf (string, &Identificador);
-        private void Scanf()
+        private void Scanf() 
         {
             match("scanf");
             match("(");
@@ -216,7 +217,9 @@ namespace Evalua
             match("&");
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
             string value = "" + Console.ReadLine();
+            float valor = float.Parse(value);
             //Requerimiento 5. Modificar el valor de la variable.
+            modValor(getContenido(), valor);
             match(tipos.Identificador);
             match(")");
             match(";");
