@@ -46,8 +46,18 @@ namespace Evalua
         }
         private float getValor(string nameVariable)
         {
-            //Requerimiento 4.
-            return 0;
+           //Requerimiento 4: Obtener el valor de la variable cuando se requiera y programar el método getValor()
+           foreach (Variable v in listaVariables)
+
+           {
+            if (v.getNombre().Equals(nameVariable))
+             {
+                return v.getValue();
+             }
+            
+           }
+           return 0;
+           
         }
         //Programa -> Librerias? Variables? Main
         public void Programa()
