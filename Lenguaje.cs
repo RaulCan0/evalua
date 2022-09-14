@@ -196,7 +196,10 @@ namespace Evalua
             match("(");
             if (getClasificacion() == tipos.Cadena)
             {
-                Console.Write(getContenido());
+                string comillas = getContenido();
+                comillas = comillas.Replace("\\n" , "\n");
+                comillas = comillas.Replace("\\t" , "\t");
+                Console.Write(comillas.Substring(1, comillas.Length - 2));
                 match(tipos.Cadena);
             }
             else
