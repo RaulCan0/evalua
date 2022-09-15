@@ -1,3 +1,4 @@
+//Alumno Raúl Cano Briseño
 //Requerimiento 1: Eliminar las comillas del printf e interpretar 
 //                las secuencias de escape dentro de la cadena.
 //Requerimiento 2: Marcar los errores sintácticos cuando la variable no exista.
