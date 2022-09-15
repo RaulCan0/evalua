@@ -169,7 +169,8 @@ namespace Evalua
             else
             {
                 Asignacion();
-                
+                //Console.WriteLine("Error de sintaxis. No se reconoce la instruccion: " + getContenido());
+                //nextToken();
             }
         }
         // Asignacion -> identificador = cadena | Expresion ;
@@ -178,7 +179,7 @@ namespace Evalua
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
             if (!existeVariable(getContenido()))
             {
-                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", log);
+                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
             }
             Log.WriteLine();
             Log.Write(getContenido() + " = ");
@@ -195,6 +196,8 @@ namespace Evalua
         // Printf -> printf (string | Expresion);
         private void Printf()
         {
+            //Requerimiento 1: Eliminar las comillas del printf e interpretar 
+           //                las secuencias de escape dentro de la cadena.
             match("printf");
             match("(");
             if (getClasificacion() == tipos.Cadena)

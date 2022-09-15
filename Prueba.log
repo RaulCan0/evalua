@@ -1,18 +1,3 @@
 Archivo: prueba.cpp
-Compilado: El 14/09/2022 a las 22:12:47
-
-pi = 3.141592653589793 = 3.1415927
-
-d = 4 = 4
-
-area = pi radio radio * * = 314.15927
-area 
-d = 10 = 10
-d 20 
-Variables: 
-area Float 314.15927
-radio Float 10
-pi Float 3.1415927
-resultado Float 0
-a Int 0
-d Int 11
+Compilado: El 14/09/2022 a las 22:52:21
+Error de sintáxis. Variable duplicada "a" en la línea 5.
