@@ -169,14 +169,17 @@ namespace Evalua
             else
             {
                 Asignacion();
-                //Console.WriteLine("Error de sintaxis. No se reconoce la instruccion: " + getContenido());
-                //nextToken();
+                
             }
         }
         // Asignacion -> identificador = cadena | Expresion ;
         private void Asignacion()
         {
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
+            if (!existeVariable(getContenido()))
+            {
+                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", log);
+            }
             Log.WriteLine();
             Log.Write(getContenido() + " = ");
             string name = getContenido();
@@ -219,6 +222,10 @@ namespace Evalua
             match(",");
             match("&");
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
+            if (!existeVariable(getContenido()))
+            {
+                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
+            }
             string value = "" + Console.ReadLine();
             float valor = float.Parse(value);
             //Requerimiento 5. Modificar el valor de la variable.
@@ -293,6 +300,10 @@ namespace Evalua
         {
             string variable = getContenido();
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
+            if (!existeVariable(getContenido()))
+            {
+                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
+            }
             match(tipos.Identificador);
             if (getClasificacion() == tipos.IncrementoTermino)
             {
@@ -449,6 +460,10 @@ namespace Evalua
             else if (getClasificacion() == tipos.Identificador)
             {
                 //Requerimiento 2. Si no existe la variable, se levanta la excepción.
+                if (!existeVariable(getContenido()))
+            {
+                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
+            }
                 Log.Write(getContenido() + " ");
                 stackOperandos.Push(getValor(getContenido()));
                 match(tipos.Identificador);
