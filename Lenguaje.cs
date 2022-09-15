@@ -122,7 +122,7 @@ namespace Evalua
                 if (!existeVariable(getContenido()))
                     addVariable(getContenido(), type);
                 else
-                    throw new Error("Error de sintáxis. Variable duplicada \"" + getContenido() + "\" en la línea " + linea + ".", Log);
+                    throw new Error("Error de sintáxis. La variable duplicada \"" + getContenido() + "\" en la línea " + linea + ".", Log);
             }
             match(tipos.Identificador);
             if (getContenido() == ",")
@@ -180,7 +180,7 @@ namespace Evalua
             //Requerimiento 2. Si no existe la variable, se levanta la excepción.
             if (!existeVariable(getContenido()))
             {
-                throw new Error("Error de sintáxis: Variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
+                throw new Error("Error de sintáxis: La variable no existe \"" + getContenido() + "\" en la línea " + linea + ".", Log);
             }
             Log.WriteLine();
             Log.Write(getContenido() + " = ");
